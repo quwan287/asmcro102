@@ -52,7 +52,7 @@ const HomeScreen = ({ navigation }) => {
             style={styles.imageBackground}
             imageStyle={{ borderRadius: 10 }}
           >
-            <Text style={styles.boxText}>QL Ăn uống</Text>
+            <Text style={styles.boxText}>QL và đo BMI</Text>
           </ImageBackground>
         </TouchableOpacity>
         <TouchableOpacity style={styles.box} onPress={() => handleBoxPress('VanDong')}>

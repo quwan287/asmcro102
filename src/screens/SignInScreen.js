@@ -7,7 +7,6 @@ import auth from '@react-native-firebase/auth';
 const SignInScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('user'); // Default role is 'user'
   const [loading, setLoading] = useState(false);
   const [errorText, setErrorText] = useState('');
 
@@ -51,15 +50,6 @@ const SignInScreen = ({ navigation }) => {
         secureTextEntry
         style={styles.input}
       />
-      <Picker
-        selectedValue={role}
-        onValueChange={(itemValue) => setRole(itemValue)}
-        style={styles.input}
-      >
-        <Picker.Item label="User" value="user" />
-        <Picker.Item label="Expert" value="expert" />
-        <Picker.Item label="Admin" value="admin" />
-      </Picker>
       {errorText ? <Text style={styles.errorText}>{errorText}</Text> : null}
       <Button mode="contained" onPress={handleSignInEmail} style={styles.button} loading={loading}>
         Sign In
